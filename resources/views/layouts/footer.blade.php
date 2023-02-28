@@ -12,7 +12,7 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('shelf', function (Blueprint $table) {
+        Schema::create('shelf_content', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug');
@@ -34,6 +34,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('shelf');
+        Schema::dropIfExists('shelf_content');
     }
 };

@@ -34,7 +34,7 @@ class StatussesSeed extends Seeder
 
             ['name' => 'active', 'type' => 'shelf_content'],
             ['name' => 'inactive', 'type' => 'shelf_content'],
-            ['name' => 'deleted', 'type' => 'shelf'],
+            ['name' => 'deleted', 'type' => 'shelf_content'],
 
             ['name' => 'active', 'type' => 'category'],
             ['name' => 'inactive', 'type' => 'category'],
