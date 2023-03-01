@@ -15,6 +15,7 @@ use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
+require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => SetLocale::class], function () {
     Route::get('/', HomeController::class)->name('home');
@@ -23,7 +24,7 @@ Route::group(['middleware' => SetLocale::class], function () {
 
 //    Route::group(['prefix' => 'cart'], function () {
 //        Route::get('/', [CartController::class, 'show'])->name('order.cart');
-//        Route::post('pshelf_content/add', [CartController::class, 'create'])->name('shelf_content.add_to_cart');
+//        Route::post('shelf_content/add', [CartController::class, 'create'])->name('shelf_content.add_to_cart');
 //        Route::post('shelf_content/{shelf_content}/update', [CartController::class, 'update'])->name('cart.shelf_content_update');
 //        Route::delete('shelf_content/{shelf_content}/delete', [CartController::class, 'destroy'])->name('cart.shelf_content_remove');
 //    });
@@ -49,4 +50,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
+

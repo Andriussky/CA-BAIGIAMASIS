@@ -53,4 +53,5 @@ class Shelf extends Model
     {
         return $this->belongsTo(Status::class);
     }
+    protected $table = 'shelf_content';
 }

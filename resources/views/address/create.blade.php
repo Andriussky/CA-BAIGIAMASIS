@@ -1,4 +1,4 @@
-edit.blade.php@extends('layouts.main')
+@extends('layouts.admin.main')
 
 <h1>New </h1>
 <span>Kurimo forma</span>

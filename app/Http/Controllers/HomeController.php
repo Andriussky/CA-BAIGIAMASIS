@@ -18,7 +18,10 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $shelf_contents = Shelf::latest()->paginate(4);
-        return view('welcome', ['shelf_contents' => $shelf_contents]);
+
+     $shelf_contents = Shelf::latest()->paginate(4);
+     return view('welcome', ['shelf_contents' => $shelf_contents]);
+
+
     }
 }
