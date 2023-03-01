@@ -13,10 +13,10 @@ class DashboardController extends Controller
     {
 
         $latestOrders = Order::latest()->take(5)->get();
-        $latestProducts = Product::latest()->take(5)->get();
+//        $latestProducts = Product::latest()->take(5)->get();
         $latestUsers = User::latest()->take(5)->get();
 
 
-        return view('admin.dashboard', compact('latestOrders', 'latestProducts', 'latestUsers'));
+        return view('dashboard', compact('latestOrders',  'latestUsers'));
     }
 }

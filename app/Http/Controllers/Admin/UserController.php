@@ -30,7 +30,7 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = $request->password;
         if (Auth::user()->role === User::ROLE_ADMIN){
-            $user->role = $request->role;
+            $user->role = $request->role ?? User::ROLE_USER;
         }
         $user->save();
 
