@@ -14,12 +14,12 @@
                 <p>Last updated: {{ $shelf_content->updated_at }}</p>
             </div>
             <div class="card-action">
-                <a href="{{ route('$shelf_contents.edit', $shelf_content->id) }}"
+                <a href="{{ route('shelf_contents.edit', $shelf_content->id) }}"
                    data-tooltip="Redaguoti"
                    class="tooltipped waves-effect waves-light green btn-small">
                     <i class="tiny material-icons">edit</i>
                 </a>
-                <form action="{{ route('$shelf_contents.destroy', $shelf_content->id) }}" method="POST">
+                <form action="{{ route('shelf_contents.destroy', $shelf_content->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit"data-tooltip="Šalinti"

@@ -15,7 +15,7 @@
     <input type="text" name="slug" placeholder="Slug" value=""><br>
     <input type="text" name="description" placeholder="Description" value=""><br>
     <input type="text" name="category_id" placeholder="Category ID" value=""><br>
-    <input type="text" name="author" placeholder="Color" value=""><br>
+    <input type="text" name="author" placeholder="Author" value=""><br>
     <input type="text" name="pages" placeholder="Pages" value=""><br>
     <input type="text" name="price" placeholder="Price" value=""><br>
     <input type="text" name="status_id" placeholder="Status ID" value=""><br>

@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\ShelfController;
 use App\Http\Controllers\Admin\StatusController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
-//use App\Http\Controllers\CartController;
+use App\Http\Controllers\CartController;
 use App\Http\Middleware\IsPersonnel;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
@@ -22,12 +22,12 @@ Route::group(['middleware' => SetLocale::class], function () {
     Route::get('/shelf_content/{shelf_content:slug}', [ShelfController::class, 'show'])->name('shelf_content.show');
     Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 
-//    Route::group(['prefix' => 'cart'], function () {
-//        Route::get('/', [CartController::class, 'show'])->name('order.cart');
-//        Route::post('shelf_content/add', [CartController::class, 'create'])->name('shelf_content.add_to_cart');
-//        Route::post('shelf_content/{shelf_content}/update', [CartController::class, 'update'])->name('cart.shelf_content_update');
-//        Route::delete('shelf_content/{shelf_content}/delete', [CartController::class, 'destroy'])->name('cart.shelf_content_remove');
-//    });
+    Route::group(['prefix' => 'cart'], function () {
+        Route::get('/', [CartController::class, 'show'])->name('order.cart');
+        Route::post('shelf_content/add', [CartController::class, 'create'])->name('shelf_content.add_to_cart');
+        Route::post('shelf_content/{shelf_content}/update', [CartController::class, 'update'])->name('cart.shelf_content_update');
+        Route::delete('shelf_content/{shelf_content}/delete', [CartController::class, 'destroy'])->name('cart.shelf_content_remove');
+    });
 
     Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'verified', IsPersonnel::class]], function () {
         Route::get('/', DashBoardController::class)->name('dashboard');

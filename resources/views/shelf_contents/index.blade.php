@@ -21,8 +21,8 @@
                     <td>{{$shelf_content->price}}</td>
                     <td>  <img src="{{$shelf_content->image}}" alt=""></td>
                     <td>
-                        <a href="{{route('$shelf_contents.edit', $shelf_content->id)}}" class="btn btn-primary">Edit</a>
-                        <form action="{{route('$shelf_contents.destroy', $shelf_content->id)}}" method="post">
+                        <a href="{{route('shelf_contents.edit', $shelf_content->id)}}" class="btn btn-primary">Edit</a>
+                        <form action="{{route('shelf_contents.destroy', $shelf_content->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
