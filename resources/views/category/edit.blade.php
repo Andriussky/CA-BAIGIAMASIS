@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin.main')
 
 <h1>Editing {{$category->name}}</h1>
 <span>Redagavimo forma</span>
@@ -11,7 +11,7 @@
     <input type="text" name="slug" placeholder="Slug" value=""><br>
     <input type="text" name="description" placeholder="Description" value=""><br>
     <input type="text" name="image" placeholder="Image" value=""><br>
-    <input type="text" name="status" placeholder="Status" value=""><br>
+    <input type="text" name="status_id" placeholder="Status ID" value=""><br>
     <input type="text" name="sort_order" placeholder="Sort_order" value=""><br>
 
     <hr>

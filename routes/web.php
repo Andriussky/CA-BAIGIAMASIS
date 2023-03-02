@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\PersonController;
 use App\Http\Controllers\Admin\ShelfController;
+use App\Http\Controllers\ShelfController as CustomerShelfController;
 use App\Http\Controllers\Admin\StatusController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
@@ -15,11 +16,11 @@ use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
-require __DIR__ . '/auth.php';
+
 
 Route::group(['middleware' => SetLocale::class], function () {
     Route::get('/', HomeController::class)->name('home');
-    Route::get('/shelf_content/{shelf_content:slug}', [ShelfController::class, 'show'])->name('shelf_content.show');
+    Route::get('/shelf_content/{shelf_content:slug}', [CustomerShelfController::class, 'show'])->name('shelf_content.show');
     Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 
     Route::group(['prefix' => 'cart'], function () {
@@ -51,3 +52,4 @@ Route::middleware('auth')->group(function () {
 });
 
 
+require __DIR__ . '/auth.php';

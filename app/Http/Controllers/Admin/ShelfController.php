@@ -29,8 +29,8 @@ class ShelfController extends Controller
         if ($request->hasFile('image') && $request->file('image')->isValid()) {    // Įkeliame failą į 'public_html/img/products' aplanką
             $image = $request->file('image');
             $clientOriginalName = $image->getClientOriginalName();
-            $image->move(public_path('img/products'), $clientOriginalName);
-            $shelf_content->image = '/img/products/' . $clientOriginalName;
+            $image->move(public_path('img/shelf_contents'), $clientOriginalName);
+            $shelf_content->image = '/img/shelf_contents/' . $clientOriginalName;
             $shelf_content->save();
         }
 
@@ -53,13 +53,13 @@ class ShelfController extends Controller
     public
     function update(ShelfRequest $request, Shelf $shelf_content)
     {
-        $shelf_content = Shelf::create($request->all());
+        $shelf_content->update($request->all());
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {    // Įkeliame failą į 'public_html/img/products' aplanką
             $image = $request->file('image');
             $clientOriginalName = $image->getClientOriginalName();
-            $image->move(public_path('img/products'), $clientOriginalName);
-            $shelf_content->image = '/img/products/' . $clientOriginalName;
+            $image->move(public_path('img/shelf_contents'), $clientOriginalName);
+            $shelf_content->image = '/img/shelf_contents/' . $clientOriginalName;
             $shelf_content->save();
         }
         return redirect()->route('shelf_contents.show', $shelf_content);

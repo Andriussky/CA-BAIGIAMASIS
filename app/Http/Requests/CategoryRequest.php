@@ -27,9 +27,8 @@ class CategoryRequest extends FormRequest
             'name' => ['required', 'max:255'],
             'slug' => ['required', 'max:255'],
             'description' => ['required', 'max:255'],
-            'image' => ['required', 'max:255'],
-            'status' => ['required', 'integer'],
-            'sort_order' => ['required', 'integer'],
+            'status_id' => ['required', 'integer'],
+            'sort_order' => ['nullable', 'integer'],
 
         ];
     }

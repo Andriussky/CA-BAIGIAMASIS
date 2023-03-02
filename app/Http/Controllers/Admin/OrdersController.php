@@ -12,7 +12,7 @@ use App\Models\Status;
 class OrdersController extends Controller
 {
     public function __construct(){
-        $this->authorizeResource(Order::class);
+//        $this->authorizeResource(Order::class);
     }
     public function index()
     {

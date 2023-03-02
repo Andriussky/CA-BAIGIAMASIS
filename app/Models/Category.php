@@ -33,7 +33,6 @@ class Category extends Model
         'status_id',
         'parent_id',
         'sort_order',
-        'status',
     ];
 
     public function parent()
