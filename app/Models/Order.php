@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property Collection<Payment> $payments
  * @property int $status_id
  * @property Status $status
- * @property Collection<Shelf> $products
+ * @property Collection<Shelf> $shelf_contents
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -68,7 +68,7 @@ class Order extends Model
         return $this->hasMany(OrderDetails::class);
     }
 
-    public function products(): HasManyThrough
+    public function shelf_contents(): HasManyThrough
     {
         return $this->hasManyThrough(
             Shelf::class,
@@ -76,7 +76,7 @@ class Order extends Model
             'order_id',
             'id',
             'id',
-            'product_id',
+            'shelf_content_id',
         );
 
 //      Alternatyva:

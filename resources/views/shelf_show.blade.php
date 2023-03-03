@@ -1,3 +1,5 @@
+@extends('layouts.admin.main')
+@section('content')
 Pavadinimas: {{ $shelf_content->name }}<br>
 Kategorija: {{ $shelf_content->category }}<br>
 Aprašymas: {{ $shelf_content->description }}<br>
@@ -11,3 +13,5 @@ Kaina: {{ $shelf_content->price }}<br>
     <input type="submit" value="Į krepšelį">
     @csrf
 </form>
+
+    @endsection

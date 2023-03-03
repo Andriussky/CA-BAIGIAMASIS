@@ -7,6 +7,7 @@ use App\Http\Requests\CartRequest;
 use App\Managers\CartManager;
 use App\Models\Order;
 use App\Models\Shelf;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
@@ -16,26 +17,8 @@ class CartController extends Controller
     }
 
 
-    public function sukurtiUzsakyma(Request $request)
-    {
-        $car = new Order();
-        $car->user_id = Auth::user()->id;
-        $car->status = Order::STATUS_NEW;
-        $car->billing_address_id = $request->billing_address_id;
-        $car->shipping_address_id = $request->shipping_address_id;
-        $car->save();
-
-        foreach ($request->cartItems as $cartItem) {
-            $this->manager->addToCart($cartItem);
-        }
-
-        return redirect()->back()->with('success', __('messages.shelf_content_added_to_cart'));
-    }
-
-
     public function create(CartRequest $request)
-    {
-        $this->manager->addToCart($request);
+    {$this->manager->addToCart($request);
 
         return redirect()->back()->with('success', __('messages.shelf_content_added_to_cart'));
     }

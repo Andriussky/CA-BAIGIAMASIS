@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @property int $id
  * @property int $order_id
- * @property string $product_name
- * @property int $product_id
+ * @property string $shelf_content_name
+ * @property int $shelf_content_id
  * @property int $quantity
  * @property string $price
  * @property int $status_id
@@ -29,8 +29,8 @@ class OrderDetails extends Model
 
     protected $fillable = [
         'order_id',
-        'product_name',
-        'product_id',
+        'shelf_content_name',
+        'shelf_content_id',
         'quantity',
         'price',
     ];
@@ -40,7 +40,7 @@ class OrderDetails extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function product(): BelongsTo
+    public function shelf_content(): BelongsTo
     {
         return $this->belongsTo(Shelf::class);
     }
@@ -52,6 +52,6 @@ class OrderDetails extends Model
 
     public function __toString(): string
     {
-        return $this->product_name;
+        return $this->shelf_content_name;
     }
 }

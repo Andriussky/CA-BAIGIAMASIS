@@ -15,7 +15,8 @@ class CartManager
         /** @var User $user */
         $user = auth()->user();
 
-        $shelf_content = Shelf::find($request->shelf_contents_id);
+        $shelf_content = Shelf::find($request->shelf_content_id);
+
 
         $cartItem = OrderDetails::where([
             'order_id'   => $user->getLatestCart()->id,
