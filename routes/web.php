@@ -30,12 +30,15 @@ Route::group(['middleware' => SetLocale::class], function () {
         Route::delete('shelf_content/{shelf_content}/delete', [CartController::class, 'destroy'])->name('cart.shelf_content_remove');
     });
 
+    Route::resources([
+        'shelf_contents'     => ShelfController::class,
+        'categories'   => CategoryController::class,
+    ]);
+
     Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'verified', IsPersonnel::class]], function () {
         Route::get('/', DashBoardController::class)->name('dashboard');
         Route::delete('/shelf_content/file/{file}', [ShelfController::class, 'destroyFile'])->name('shelf_content.destroy-file');
         Route::resources([
-            'shelf_contents'     => ShelfController::class,
-            'categories'   => CategoryController::class,
             'orders'       => OrdersController::class,
             'statuses'     => StatusController::class,
             'addresses'    => AddressController::class,

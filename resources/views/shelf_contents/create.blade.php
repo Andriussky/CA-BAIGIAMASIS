@@ -1,5 +1,11 @@
 @extends('layouts.admin.main')
 
+@auth
+    <ul class="hidden w-8/12 md:flex items-center justify-center space-x-8">
+        <li>
+        </li>
+        @if (auth()?->user()?->isAdmin())
+
 <h1>New </h1>
 <span>Kurimo forma</span>
 <form action="{{route('shelf_contents.store')}}" method="post" enctype="multipart/form-data">
@@ -24,3 +30,5 @@
     <hr>
     <input type="submit" class="waves-effect waves-light btn" value="Atnaujinti">
 </form>
+@endif
+@endauth

@@ -1,3 +1,5 @@
+@extends('layouts.admin.main')
+
 <div class="row">
     <div class="col s12">
         <h1>People</h1>
