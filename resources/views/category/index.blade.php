@@ -1,5 +1,6 @@
 @extends('layouts.admin.main')
 
+@section('content')
 <div class="row">
     <div class="col s12">
         <h1>Categories</h1>
@@ -21,13 +22,14 @@
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Actions</th>
+
             </tr>
             </thead>
             <tbody>
             @foreach($categories as $category)
                 <tr>
                     <td>{{$category->id}}</td>
-                    <td>{{$category->name}}</td>
+                    <td> <a href="{{route('category.show', $category->slug)}}" >{{$category->name}}</a> </td>
                     <td>{{$category->surname}}</td>
                     <td>
 
@@ -52,3 +54,5 @@
             </tbody>
         </table>
     </div>
+
+@endsection

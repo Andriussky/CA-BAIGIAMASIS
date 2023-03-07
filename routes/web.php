@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\PersonController;
 use App\Http\Controllers\Admin\ShelfController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ShelfController as CustomerShelfController;
 use App\Http\Controllers\Admin\StatusController;
 use App\Http\Controllers\Admin\UserController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\ProfileController;
 Route::group(['middleware' => SetLocale::class], function () {
     Route::get('/', HomeController::class)->name('home');
     Route::get('/shelf_content/{shelf_content:slug}', [CustomerShelfController::class, 'show'])->name('shelf_content.show');
-    Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
+    Route::get('/category/{category:slug}', [CategoriesController::class, 'show'])->name('category.show');
 
     Route::group(['prefix' => 'cart'], function () {
         Route::get('/', [CartController::class, 'show'])->name('order.cart');
