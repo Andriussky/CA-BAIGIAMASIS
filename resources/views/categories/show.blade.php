@@ -16,8 +16,17 @@
                 <p>Creation date{{$category->created_at}}: </p>
                 <p>Last updated:{{$category->updated_at}} </p>
             </div>
+           @foreach($category->children as $child)
+
+                <a href="{{route('category.show', $child->slug)}}" >{{$child->name}}</a>
+            @endforeach
             @foreach($shelf_contents as $shelf)
       {{$shelf->name}}
+
             @endforeach
+
+
+
+
     </div>
 </div>

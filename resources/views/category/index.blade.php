@@ -20,7 +20,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Surname</th>
+                <th>Parent</th>
                 <th>Actions</th>
 
             </tr>
@@ -30,7 +30,7 @@
                 <tr>
                     <td>{{$category->id}}</td>
                     <td> <a href="{{route('category.show', $category->slug)}}" >{{$category->name}}</a> </td>
-                    <td>{{$category->surname}}</td>
+                    <td>{{$category?->parent?->name}}</td>
                     <td>
 
                         @auth

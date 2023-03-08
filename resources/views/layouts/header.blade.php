@@ -1,11 +1,11 @@
-{{--<link rel="stylesheet" href="{{ asset('css/header.css') }}">--}}
+<link rel="stylesheet" href="{{ asset('css/header.css') }}">
 
 
 <header>
     <nav>
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">
-                <img src="{{asset('/img/logo.png')}}" alt="logo" class="logo">
+                <img src="{{asset('https://cdn3.vectorstock.com/i/1000x1000/23/77/book-icon-logo-vector-2982377.jpg')}}" alt="logo" class="logo" style="width: 100px;">
             </a>
             <a href="/login">
 
