@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/header.css') }}">
+<link rel="stylesheet" href="{{ asset('css/headers.css') }}">
 
 
 <header>
@@ -11,17 +11,12 @@
 
 
             </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id="nav-mobile" class="links">
                 <li>[{{app()->getLocale()}}]</li>
                 <li></li>
-                <li><a href="/">Home</a></li>
-{{--                <li><a href="{{route('orders.index')}}">Orders</a></li>--}}
+                <li><a href="{{route('home')}}">Home</a></li>
                 <li><a href="{{route('shelf_contents.index')}}">Shelf</a></li>
                 <li><a href="{{route('categories.index')}}">Categories</a></li>
-{{--                <li><a href="{{route('statuses.index')}}">Statuses</a></li>--}}
-{{--                <li><a href="{{route('users.index')}}">Users</a></li>--}}
-{{--                <li><a href="{{route('persons.index')}}">Persons</a></li>--}}
-{{--                <li><a href="{{route('addresses.index')}}">Addresses</a></li>--}}
                 <li></li>
             </ul>
             <a href="{{route('profile.edit')}}">{{ __('Profile') }}</a>
