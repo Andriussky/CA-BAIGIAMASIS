@@ -1,5 +1,6 @@
 @extends('layouts.admin.main')
 @section('content')
+    <body>
 <div class="row">
     <div class="col s12">
         <h1>Shelf</h1>
@@ -28,12 +29,12 @@
                     <td>{{$shelf_content->id}}</td>
                     <td>{{$shelf_content->name}}</td>
                     <td>{{$shelf_content->price}}</td>
-                    <td>  <img src="{{$shelf_content->image}}" alt=""></td>
+                    <td>  <img src="{{$shelf_content->image}}" alt="" class="foto"></td>
                     <td>
                         <form action="{{route('shelf_content.add_to_cart')}}" method="POST">
                             <input type="hidden" name="shelf_content_id" value="{{ $shelf_content->id }}">
                             <input type=number name="quantity" value="1">
-                            <input type="submit" value="Į krepšelį">
+                            <input type="submit" value="Add to cart"  class="cart">
                             @csrf
                         </form>
                     </td>
@@ -58,5 +59,5 @@
         </table>
     </div>
 </div>
-
+    </body>
 @endsection

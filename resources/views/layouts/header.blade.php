@@ -9,7 +9,6 @@
             </a>
             <a href="/login">
 
-
             </a>
             <ul id="nav-mobile" class="links">
                 <li>[{{app()->getLocale()}}]</li>
@@ -18,12 +17,14 @@
                 <li><a href="{{route('shelf_contents.index')}}">Shelf</a></li>
                 <li><a href="{{route('categories.index')}}">Categories</a></li>
                 <li></li>
+
+                <a href="{{route('profile.edit')}}">{{ __('Profile') }}</a>
+                <form method="POST" action="{{ route('logout') }}">    @csrf
+                    <x-responsive-nav-link :href="route('logout')"
+                                           onclick="event.preventDefault();                    this.closest('form').submit();">        {{ __('Log Out') }}    </x-responsive-nav-link>
+                </form>
             </ul>
-            <a href="{{route('profile.edit')}}">{{ __('Profile') }}</a>
-            <form method="POST" action="{{ route('logout') }}">    @csrf
-                <x-responsive-nav-link :href="route('logout')"
-                                       onclick="event.preventDefault();                    this.closest('form').submit();">        {{ __('Log Out') }}    </x-responsive-nav-link>
-            </form>
+
         </div>
     </nav>
     @auth
