@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
 
 @section('content')
+    <body>
 <div class="row">
     <div class="col s12">
         <h1>Categories</h1>
@@ -11,7 +13,7 @@
                 @if (auth()?->user()?->isAdmin())
 
 
-                <a href="{{route('categories.create')}}" class="btn btn-primary">Create</a>
+                <a href="{{route('categories.create')}}" class="admin-btn">Create</a>
                 @endif
                 @endauth
 
@@ -29,7 +31,7 @@
             @foreach($categories as $category)
                 <tr>
                     <td>{{$category->id}}</td>
-                    <td> <a href="{{route('category.show', $category->slug)}}" >{{$category->name}}</a> </td>
+                    <td> <a href="{{route('category.show', $category->slug)}}" class="admin-btn">{{$category->name}}</a> </td>
                     <td>{{$category?->parent?->name}}</td>
                     <td>
 
@@ -39,8 +41,8 @@
                                 </li>
                                 @if (auth()?->user()?->isAdmin())
 
-                                <a href="{{route('categories.edit', $category->id)}}" class="btn btn-primary">Edit</a>
-                        <form action="{{route('categories.destroy', $category->id)}}" method="post">
+                                <a href="{{route('categories.edit', $category->id)}}" class="admin-btn">Edit</a>
+                        <form action="{{route('categories.destroy', $category->id)}}" class="admin-btn" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -56,3 +58,4 @@
     </div>
 
 @endsection
+    </body>

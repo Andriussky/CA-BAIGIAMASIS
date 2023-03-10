@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@extends('layouts.admin.main')
+
+<body>
 <div class="row">
     <div class="col s12 m3">
         <div class="card">
@@ -31,3 +35,4 @@
         </div>
     </div>
 </div>
+</body>

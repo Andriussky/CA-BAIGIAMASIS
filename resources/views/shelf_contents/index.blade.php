@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
 @section('content')
     <body>
@@ -10,7 +11,7 @@
                 <li>
                 </li>
                 @if (auth()?->user()?->isAdmin())
-        <a href="{{route('shelf_contents.create')}}" class="btn btn-primary">Create</a>
+        <a href="{{route('shelf_contents.create')}}" class="admin-btn">Create</a>
                 @endif
                 @endauth
 
@@ -44,8 +45,8 @@
                                 <li>
                                 </li>
                                 @if (auth()?->user()?->isAdmin())
-                        <a href="{{route('shelf_contents.edit', $shelf_content->id)}}" class="btn btn-primary">Edit</a>
-                        <form action="{{route('shelf_contents.destroy', $shelf_content->id)}}" method="post">
+                        <a href="{{route('shelf_contents.edit', $shelf_content->id)}}" class="admin-btn">Edit</a>
+                        <form action="{{route('shelf_contents.destroy', $shelf_content->id)}}" class="admin-btn" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

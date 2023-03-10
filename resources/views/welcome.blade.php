@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
 
+<body>
 @if (Route::has('login'))
     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
         @auth
@@ -14,3 +16,4 @@
 
     </div>
 @endif
+</body>
