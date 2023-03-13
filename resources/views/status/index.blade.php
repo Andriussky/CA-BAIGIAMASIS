@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
+@section('content')
  <body>
 <div class="row">
 <div class="col s12">
@@ -35,3 +36,4 @@
 </div>
 </div>
  </body>
+@endsection

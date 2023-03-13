@@ -1,17 +1,20 @@
-@extends('layouts.main')
-
+@extends('layouts.admin.main')
+@section('content')
+    <body>
 <h1>Editing {{$status->name}}</h1>
-<span>Redagavimo forma</span>
-<form action="{{route('statuses.update', $status->id)}}" method="post">
+
+<form action="{{route('statuses.update', $status->id)}}" method="post" class="edit-form">
     @method('PUT')
     @csrf
 
 
 
-    <input type="text" name="name" placeholder="Name" value=""><br>
-    <input type="text" name="type" placeholder="Type" value=""><br>
+    <input type="text" name="name" placeholder="Name" value="" class="input-text"><br>
+    <input type="text" name="type" placeholder="Type" value="" class="input-text"><br>
 
 
-    <hr>
-    <input type="submit" class="waves-effect waves-light btn" value="Atnaujinti">
+
+    <input type="submit" class="submit" value="Edit">
 </form>
+</body>
+@endsection

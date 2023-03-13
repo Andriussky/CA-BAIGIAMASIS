@@ -1,3 +1,9 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ asset('css/headers.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
 @include('layouts.header')
 
 @if ($errors->any())
@@ -13,3 +19,5 @@
 @yield('content')
 
 @include('layouts.footer')
+</body>
+</html>

@@ -28,7 +28,7 @@
     <input type="file" name="image" placeholder="Image" value=""><br>
 
     <hr>
-    <input type="submit" class="waves-effect waves-light btn" value="Atnaujinti">
+    <input type="submit" class="submit" value="Atnaujinti">
 </form>
 @endif
 @endauth

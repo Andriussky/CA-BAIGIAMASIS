@@ -7,7 +7,7 @@
             <a href="/" class="brand-logo">
                 <img src="{{asset('https://cdn.vectorstock.com/i/preview-1x/69/19/book-logo-vector-45966919.jpg')}}" alt="logo" class="logo" style="width: 100px;">
             </a>
-            <a href="/login">
+            <a href="/login" class="header-button">
 
             </a>
             <ul id="nav-mobile" class="links">
@@ -19,7 +19,7 @@
                 <li></li>
 
                 <a href="{{route('profile.edit')}}"  class="header-button">{{ __('Profile') }}</a>
-                <form method="POST" action="{{ route('logout') }}">    @csrf
+                <form method="POST" class="logout-form" action="{{ route('logout') }}">    @csrf
                     <x-responsive-nav-link :href="route('logout')"  class="header-button"
                                            onclick="event.preventDefault();                    this.closest('form').submit();">        {{ __('Log Out') }}    </x-responsive-nav-link>
                 </form>

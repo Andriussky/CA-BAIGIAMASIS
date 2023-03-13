@@ -45,12 +45,40 @@ header {
     padding: 0px 20px;
 }
 
-.links li a{
+.header-button{
     transition: all 0.3s ease 0s;
 }
 
-.links li a:hover{
+.header-button:hover{
    color: #0088a9
+}
+
+.admins
+{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #edf0f1;
+}
+
+.admins:hover
+{
+    background-color: rgba(0,136,169,0.8);
+}
+
+.cart{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cart:hover{
+    background-color: rgba(0,136,169,0.8);
 }
 
 button
@@ -66,13 +94,4 @@ button
 button:hover
 {
     background-color: rgba(0,136,169,0.8);
-}
-
-.cart{
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
 }

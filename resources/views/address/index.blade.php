@@ -1,9 +1,11 @@
-@extends('layouts.admin.main')
 
+@extends('layouts.admin.main')
+@section('content')
+<body>
 <div class="row">
     <div class="col s12">
         <h1>Addresses</h1>
-        <a href="{{route('addresses.create')}}" class="btn btn-primary">Create</a>
+        <a href="{{route('addresses.create')}}" class="admin-btn">Create</a>
         <table class="table">
             <thead>
             <tr>
@@ -20,8 +22,8 @@
                     <td>{{$address->name}}</td>
                     <td>{{$address->country}}</td>
                     <td>
-                        <a href="{{route('addresses.edit', $address->id)}}" class="btn btn-primary">Edit</a>
-                        <form action="{{route('addresses.destroy', $address->id)}}" method="post">
+                        <a href="{{route('addresses.edit', $address->id)}}" class="admin-btn">Edit</a>
+                        <form action="{{route('addresses.destroy', $address->id)}}" class="admin-btn" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -32,3 +34,5 @@
             </tbody>
         </table>
     </div>
+</body>
+@endsection

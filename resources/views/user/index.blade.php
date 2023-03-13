@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
-
+@section('content')
+    <body></body>
 <div class="row">
     <div class="col s12">
         <h1>Users</h1>
-        <a href="{{route('users.create')}}" class="btn btn-primary">Create</a>
+        <a href="{{route('users.create')}}" class="admin-btn">Create</a>
         <table class="table">
             <thead>
             <tr>
@@ -21,7 +23,7 @@
                     <td>{{$user->role}}</td>
                     <td>{{$user->type}}</td>
                     <td>
-                        <a href="{{route('users.edit', $user->id)}}" class="btn btn-primary">Edit</a>
+                        <a href="{{route('users.edit', $user->id)}}" class="admin-btn">Edit</a>
                         <form action="{{route('users.destroy', $user->id)}}" method="post">
                             @csrf
                             @method('DELETE')
@@ -33,3 +35,5 @@
             </tbody>
         </table>
     </div>
+</body>
+@endsection
