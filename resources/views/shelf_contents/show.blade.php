@@ -16,6 +16,7 @@
                 <p>Categories: {{ $shelf_content->category->name }}</p>
                 <p>Creation date: {{ $shelf_content->created_at }}</p>
                 <p>Last updated: {{ $shelf_content->updated_at }}</p>
+                <p> {{ $shelf_content->image }}</p>
             </div>
             <div class="card-action">
                 <a href="{{ route('shelf_contents.edit', $shelf_content->id) }}"

@@ -148,4 +148,8 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return '[' . $this->name . '] ' . $this->person;
     }
+    public function isUser(): bool
+    {
+        return $this->role === self::ROLE_USER;
+    }
 }

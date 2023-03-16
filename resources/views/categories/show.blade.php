@@ -23,9 +23,10 @@
 
                 <a href="{{route('category.show', $child->slug)}}" >{{$child->name}}</a>
             @endforeach
-            @foreach($shelf_contents as $shelf)
-      {{$shelf->name}}
-
+            @foreach($shelf_contents as $shelf_content)
+                <td>
+                    <a href="{{ route('shelf_content.show', $shelf_content->slug) }}" class="admin-btn">{{ $shelf_content->name }}</a>
+                </td>
             @endforeach
 
 

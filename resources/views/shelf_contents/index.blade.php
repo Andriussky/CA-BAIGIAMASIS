@@ -20,7 +20,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Price</th>
+                <th>Cover and price</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -29,13 +29,21 @@
                 <tr>
                     <td>{{$shelf_content->id}}</td>
                     <td>{{$shelf_content->name}}</td>
-                    <td>{{$shelf_content->price}}</td>
                     <td>  <img src="{{$shelf_content->image}}" alt="" class="foto"></td>
+                    <td>{{$shelf_content->price}}</td>
                     <td>
+
+                        @auth
+                            <ul class="hidden w-8/12 md:flex items-center justify-center space-x-8">
+                                <li>
+                                </li>
+                                @if (auth()?->user()?->isUser())
                         <form action="{{route('shelf_content.add_to_cart')}}" method="POST">
                             <input type="hidden" name="shelf_content_id" value="{{ $shelf_content->id }}">
                             <input type=number name="quantity" value="1">
                             <input type="submit" value="Add to cart"  class="cart">
+                            @endif
+                            @endauth
                             @csrf
                         </form>
                     </td>

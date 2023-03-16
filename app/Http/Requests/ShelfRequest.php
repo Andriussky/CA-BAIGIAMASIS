@@ -25,7 +25,7 @@ class ShelfRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'min:4', 'max:255'],
-            'price' => ['required','integer', 'min:0'],
+            'price' => ['required','string', 'min:0'],
 
             'category_id' => ['required','integer', 'exists:categories,id'],
             'status_id' => ['required','integer', 'exists:statuses,id'],
