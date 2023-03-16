@@ -1,0 +1,59 @@
+.footer {
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    line-height: 2.5;
+}
+
+.footer ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('https://i.pinimg.com/originals/de/0a/68/de0a684ddb207800849ebfc5dd0b90ce.jpg');
+    background-size: cover; /* Optional: resize the background image to cover the entire element */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

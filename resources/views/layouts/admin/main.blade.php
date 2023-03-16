@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="{{ asset('css/headers.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">--}}
 </head>
 <body>
 @include('layouts.header')
@@ -18,6 +19,6 @@
 
 @yield('content')
 
-@include('layouts.footer')
+{{--@include('layouts.footer')--}}
 </body>
 </html>

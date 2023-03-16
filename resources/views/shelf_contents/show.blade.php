@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('layouts.admin.main')
 
+@section('content')
 <body>
 <div class="row">
     <div class="col s12 m3">
@@ -20,13 +20,13 @@
             <div class="card-action">
                 <a href="{{ route('shelf_contents.edit', $shelf_content->id) }}"
                    data-tooltip="Redaguoti"
-                   class="tooltipped waves-effect waves-light green btn-small">
+                   class="admin-btn">
                     <i class="tiny material-icons">edit</i>
                 </a>
-                <form action="{{ route('shelf_contents.destroy', $shelf_content->id) }}" method="POST">
+                <form action="{{ route('shelf_contents.destroy', $shelf_content->id) }}" class="admin-btn" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit"data-tooltip="Šalinti"
+                    <button type="submit"data-tooltip="Delete"
                             class="tooltipped waves-effect waves-light red btn-small">
                         <i class="tiny material-icons">delete</i>
                     </button>
@@ -36,3 +36,4 @@
     </div>
 </div>
 </body>
+@endsection

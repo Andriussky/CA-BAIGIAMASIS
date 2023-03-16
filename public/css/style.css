@@ -8,6 +8,8 @@ body{
     text-decoration: none;
     background-image: url('https://i.pinimg.com/originals/de/0a/68/de0a684ddb207800849ebfc5dd0b90ce.jpg');
     background-size: cover; /* Optional: resize the background image to cover the entire element */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .admin-btn {
     font-family: "Montserrat", sans-serif;
@@ -107,4 +109,8 @@ select option {
 select option:checked {
     background-color: #0088a9;
     color: #fff;
+}
+
+table th {
+    padding: 0.5em 1em;
 }

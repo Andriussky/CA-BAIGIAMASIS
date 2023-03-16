@@ -25,7 +25,7 @@
     <input type="text" name="status_id" placeholder="Status ID" value="{{$shelf_content->status_id}}" class="input-text"><br>
     <input type="file" name="image" placeholder="Image" value="{{$shelf_content->image}}" class="admin-btn"><br>
 
-    <input type="submit" class="submit" value="Create">
+    <input type="submit" class="submit" value="Edit">
 </form>
 
 @endif
