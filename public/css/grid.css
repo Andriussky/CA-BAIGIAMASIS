@@ -1,20 +1,5 @@
-.list-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.list li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    text-align: center;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
 }

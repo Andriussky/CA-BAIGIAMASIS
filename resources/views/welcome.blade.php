@@ -4,7 +4,7 @@
 @if (Route::has('login'))
     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
         @auth
-            <a href="{{ url('/admin') }}" class="admins">Admin</a>
+{{--            <a href="{{ url('/admin') }}" class="admins">Admin</a>--}}
         @else
             <a href="{{ route('login') }}" class="admins">Log in</a>
 

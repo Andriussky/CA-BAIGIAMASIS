@@ -11,7 +11,7 @@
 
             </a>
             <ul id="nav-mobile" class="links">
-                <li>[{{app()->getLocale()}}]</li>
+
                 <li></li>
                 <li><a href="{{route('home')}}"  class="header-button">Home</a></li>
                 <li><a href="{{route('shelf_contents.index')}}"  class="header-button">Shelf</a></li>
@@ -19,10 +19,16 @@
                 <li></li>
 
                 <a href="{{route('profile.edit')}}"  class="header-button">{{ __('Profile') }}</a>
-                <form method="POST" class="logout-form" action="{{ route('logout') }}">    @csrf
-                    <x-responsive-nav-link :href="route('logout')"  class="header-button"
-                                           onclick="event.preventDefault();                    this.closest('form').submit();">        {{ __('Log Out') }}    </x-responsive-nav-link>
-                </form>
+                @auth
+                    <form method="POST" class="logout-form" action="{{ route('logout') }}">
+                        @csrf
+                        <x-responsive-nav-link :href="route('logout')" class="header-button" onclick="event.preventDefault(); this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-responsive-nav-link>
+                    </form>
+                @else
+                    <p style="color: red;">You aren't logged in!!</p>
+                @endauth
             </ul>
 
         </div>
