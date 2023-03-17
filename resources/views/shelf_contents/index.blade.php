@@ -17,7 +17,6 @@
             <th>Image</th>
             <th>Price</th>
             <th>Action</th>
-            <th>Admin</th>
         </tr>
         </thead>
         <body>
@@ -60,29 +59,9 @@
     </table>
 
 
-        </table>
+    </table>
     </div>
-</div>
-    <script>
-    const searchForm = document.getElementById('searchForm');
-    const searchInput = document.getElementById('searchInput');
-    const shelfContentRows = document.querySelectorAll('.shelf-content-row');
+    </div>
 
-    searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const searchQuery = searchInput.value.toLowerCase();
-
-    shelfContentRows.forEach((row) => {
-    const nameCell = row.querySelector('td:nth-child(2)');
-
-    if (nameCell.innerText.toLowerCase().includes(searchQuery)) {
-    row.style.display = '';
-    } else {
-    row.style.display = 'none';
-    }
-    });
-    });
-   </script>
     </body>
 @endsection

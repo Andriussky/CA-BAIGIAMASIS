@@ -2,7 +2,7 @@
 <head>
     <link rel="stylesheet" href="{{ asset('css/headers.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <script src="{{ asset('js/search.js') }}"></script>
+
 {{--    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">--}}
 </head>
 <body>
