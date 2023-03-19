@@ -44,7 +44,6 @@ Route::group(['middleware' => SetLocale::class], function () {
             'statuses'     => StatusController::class,
             'addresses'    => AddressController::class,
             'users'        => UserController::class,
-            'persons'      => PersonController::class,
         ]);
     });
 });

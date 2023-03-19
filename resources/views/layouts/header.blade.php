@@ -55,11 +55,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('persons.index')}}"  class="header-button">
-                        {{ __('Persons') }}
-                    </a>
-                </li>
-                <li>
                     <a href="{{route('addresses.index')}}"  class="header-button">
                         {{ __('Addresses') }}
                     </a>
