@@ -14,6 +14,15 @@ searchForm.addEventListener('submit', (e) => {
             row.style.display = '';
         } else {
             row.style.display = 'none';
+
+        }
+        const nameCell2 = row.querySelector('td:nth-child(1)');
+
+        if (nameCell2.innerText.toLowerCase().includes(searchQuery)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
         }
     });
 });
+

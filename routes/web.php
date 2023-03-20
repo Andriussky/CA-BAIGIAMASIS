@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\AddressController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrdersController;
-use App\Http\Controllers\Admin\PersonController;
 use App\Http\Controllers\Admin\ShelfController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ShelfController as CustomerShelfController;

@@ -22,7 +22,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string $password
  * @property string $role
  * @property string $remember_token
- * @property Person $person
+
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -146,7 +146,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function __toString(): string
     {
-        return '[' . $this->name . '] ' . $this->person;
+        return '[' . $this->name;
     }
     public function isUser(): bool
     {

@@ -21,11 +21,11 @@ class StatussesSeed extends Seeder
             ['name' => 'canceled', 'type' => 'order'],
             ['name' => 'done', 'type' => 'order'],
 
-            ['name' => 'new', 'type' => 'payment'],
-            ['name' => 'in_progress', 'type' => 'payment'],
-            ['name' => 'confirmed', 'type' => 'payment'],
-            ['name' => 'canceled', 'type' => 'payment'],
-            ['name' => 'done', 'type' => 'payment'],
+//            ['name' => 'new', 'type' => 'payment'],
+//            ['name' => 'in_progress', 'type' => 'payment'],
+//            ['name' => 'confirmed', 'type' => 'payment'],
+//            ['name' => 'canceled', 'type' => 'payment'],
+//            ['name' => 'done', 'type' => 'payment'],
 
             ['name' => 'active', 'type' => 'user'],
             ['name' => 'inactive', 'type' => 'user'],

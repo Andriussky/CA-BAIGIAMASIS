@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/headers.css') }}">
 
 
+
 <header>
     <nav>
         <div class="nav-wrapper">
